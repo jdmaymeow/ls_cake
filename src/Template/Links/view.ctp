@@ -25,7 +25,7 @@
         <tr>
             <th scope="row"><?= __('Shortened') ?></th>
             <!--for example-->
-            <td>http://localhost:8765/links/go/<?= h($link->shortened) ?></td>
+            <td><?= $this->Html->link('http://localhost:8765/go/' . $link->shortened) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('User') ?></th>
@@ -34,6 +34,10 @@
         <tr>
             <th scope="row"><?= __('Category') ?></th>
             <td><?= $link->has('category') ? $this->Html->link($link->category->name, ['controller' => 'Categories', 'action' => 'view', $link->category->id]) : '' ?></td>
+        </tr>
+        <tr>
+            <th scope="row"><?= __('Views') ?></th>
+            <td><?= $this->Number->format($link->views) ?></td>
         </tr>
         <tr>
             <th scope="row"><?= __('Id') ?></th>

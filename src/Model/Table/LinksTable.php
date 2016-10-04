@@ -71,10 +71,6 @@ class LinksTable extends Table
             ->requirePresence('url', 'create')
             ->notEmpty('url');
 
-        $validator
-            ->requirePresence('shortened', 'create')
-            ->notEmpty('shortened');
-
         return $validator;
     }
 

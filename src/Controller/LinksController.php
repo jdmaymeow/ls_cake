@@ -129,7 +129,23 @@ class LinksController extends AppController
     {
         //we need find only one item
         $link = $this->Links->findByShortened($shortenedID)->first();
-
+        $this->addCount($link->id);
         $this->redirect($link->url);
+    }
+
+    protected function addCount($id = null)
+    {
+        //Not shortened id
+        $link = $this->Links->get($id);
+
+        //$link->views = $link->views;
+        //OR make it Simpler
+        $link->views++;
+
+        if ($this->Links->save($link)) {
+            return true;
+        }
+
+        return false;
     }
 }

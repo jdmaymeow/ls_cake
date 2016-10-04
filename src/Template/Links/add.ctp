@@ -15,7 +15,7 @@
         <?php
             echo $this->Form->input('name');
             echo $this->Form->input('url');
-            echo $this->Form->input('shortened');
+            //echo $this->Form->input('shortened');
             echo $this->Form->input('user_id', ['options' => $users]);
             echo $this->Form->input('category_id', ['options' => $categories]);
         ?>

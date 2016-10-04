@@ -26,7 +26,7 @@ class CreateLinks extends AbstractMigration
         $table->addColumn('shortened', 'string', [
             'default' => null,
             'limit' => 255,
-            'null' => false,
+            'null' => true,
         ]);
         $table->addColumn('user_id', 'integer', [
             'default' => null,

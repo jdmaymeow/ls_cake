@@ -56,6 +56,9 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
+    //use domain.name/go/x instead of domain.name/links/go/x
+    $routes->connect('/go/*', ['controller' => 'Links', 'action' => 'go']);
+
     /**
      * Connect catchall routes for all controllers.
      *
