@@ -1,5 +1,7 @@
 # Simple Link shortener
 
+Simple link shortener created with cakePHP
+
 ## Requirements
 
 * PHP ;)
